@@ -452,6 +452,15 @@ button:focus-visible {
   position: relative;
 }
 
+.media-frame-has-image {
+  background: #f7f8f7;
+  padding: 0;
+}
+
+.media-frame-has-image::before {
+  content: none;
+}
+
 .media-frame::before {
   border: 1px solid rgba(25, 77, 69, 0.14);
   border-radius: 6px;
@@ -466,6 +475,14 @@ button:focus-visible {
   max-width: 210px;
   min-height: 260px;
   width: 100%;
+}
+
+.media-image {
+  object-fit: contain;
+}
+
+.media-frame-mobile .media-image {
+  object-position: top center;
 }
 
 .media-frame span {
@@ -587,6 +604,13 @@ button:focus-visible {
 .contact-actions {
   align-content: start;
   justify-content: flex-start;
+}
+
+.contact-location {
+  color: rgba(255, 255, 255, 0.72);
+  flex-basis: 100%;
+  line-height: 1.6;
+  margin: 4px 0 0;
 }
 
 .contact-section .secondary-button {

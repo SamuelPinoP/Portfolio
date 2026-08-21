@@ -2,12 +2,8 @@ import type { PortfolioData } from "@/types/portfolio";
 
 export const placeholders = {
   portfolioDomain: "TODO_REPLACE_PORTFOLIO_DOMAIN_AFTER_DEPLOY",
-  aiMultiDesktopScreenshot: "TODO_REPLACE_AI_MULTI_DESKTOP_SCREENSHOT",
-  aiMultiMobileScreenshot: "TODO_REPLACE_AI_MULTI_MOBILE_SCREENSHOT",
-  multiAndroidScreenshots: "TODO_REPLACE_MULTI_ANDROID_PHONE_SCREENSHOTS",
   multiAndroidReleaseLink: "TODO_REPLACE_MULTI_ANDROID_APK_OR_PLAY_STORE_LINK",
   geekTextLiveDemo: "TODO_REPLACE_GEEK_TEXT_LIVE_DEMO_URL",
-  geekTextScreenshot: "TODO_REPLACE_GEEK_TEXT_API_SCREENSHOT",
 } as const;
 
 export const portfolio: PortfolioData = {
@@ -15,9 +11,10 @@ export const portfolio: PortfolioData = {
     name: "Samuel Pino",
     title: "Software Engineer",
     supportingTitle: "Full-Stack Developer",
-    location: "Miami, Florida",
+    location: "Florida City, Florida, United States",
     email: "samuelpinop1999@gmail.com",
-    phone: "(786) 926-0721",
+    phone: "+1 (786) 926-0721",
+    phoneHref: "tel:+17869260721",
     resumePath: "/resume/Samuel-Pino-Software-Engineer-Resume.pdf",
     summary:
       "Computer Science graduate building full-stack, backend, mobile, and AI-enabled software with production-minded engineering habits.",
@@ -105,15 +102,15 @@ export const portfolio: PortfolioData = {
       screenshots: [
         {
           label: "Desktop dashboard",
-          alt: "Placeholder for AI-Multi desktop dashboard screenshot",
+          alt: "AI-Multi desktop dashboard screenshot showing productivity analytics.",
           aspect: "desktop",
-          placeholder: placeholders.aiMultiDesktopScreenshot,
+          src: "/images/projects/ai-multi-dashboard-desktop.png",
         },
         {
           label: "Mobile workflow",
-          alt: "Placeholder for AI-Multi mobile screenshot",
+          alt: "AI-Multi mobile dashboard screenshot showing responsive productivity analytics.",
           aspect: "mobile",
-          placeholder: placeholders.aiMultiMobileScreenshot,
+          src: "/images/projects/ai-multi-dashboard-mobile.jpeg",
         },
       ],
       caseStudy: [
@@ -217,21 +214,21 @@ export const portfolio: PortfolioData = {
       screenshots: [
         {
           label: "Notes",
-          alt: "Placeholder for Multi Android notes screenshot",
+          alt: "Multi Android notes screen showing saved notes.",
           aspect: "mobile",
-          placeholder: placeholders.multiAndroidScreenshots,
+          src: "/images/projects/multi-notes.jpeg",
         },
         {
           label: "Weekly goals",
-          alt: "Placeholder for Multi Android weekly goals screenshot",
+          alt: "Multi Android weekly goals screen showing habit and goal tracking.",
           aspect: "mobile",
-          placeholder: placeholders.multiAndroidScreenshots,
+          src: "/images/projects/multi-weekly-goals.jpeg",
         },
         {
           label: "Calendar",
-          alt: "Placeholder for Multi Android calendar screenshot",
+          alt: "Multi Android events calendar screen showing August 2026.",
           aspect: "mobile",
-          placeholder: placeholders.multiAndroidScreenshots,
+          src: "/images/projects/multi-events-calendar.jpeg",
         },
       ],
       caseStudy: [
@@ -328,10 +325,10 @@ export const portfolio: PortfolioData = {
       ],
       screenshots: [
         {
-          label: "API documentation",
-          alt: "Placeholder for Geek Text Swagger or API screenshot",
+          label: "API router",
+          alt: "Geek Text FastAPI router code screenshot showing ratings and comments endpoints.",
           aspect: "desktop",
-          placeholder: placeholders.geekTextScreenshot,
+          src: "/images/projects/geek-text-api-router.png",
         },
       ],
       caseStudy: [

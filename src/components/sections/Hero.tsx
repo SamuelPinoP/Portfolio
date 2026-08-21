@@ -33,6 +33,10 @@ export function Hero() {
             <strong>B.S. Computer Science, FIU - GPA 3.98</strong>
           </div>
           <div>
+            <span>Location</span>
+            <strong>{portfolio.profile.location}</strong>
+          </div>
+          <div>
             <span>Production work</span>
             <strong>Next.js platform with PostgreSQL, auth, file storage, and CI/CD</strong>
           </div>

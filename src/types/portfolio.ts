@@ -25,7 +25,7 @@ export type ProjectScreenshot = {
   alt: string;
   aspect: "desktop" | "mobile";
   src?: string;
-  placeholder: string;
+  placeholder?: string;
 };
 
 export type CaseStudySection = {
@@ -80,6 +80,7 @@ export type PortfolioData = {
     location: string;
     email: string;
     phone: string;
+    phoneHref: string;
     summary: string;
     heroStatement: string;
     about: string[];
