@@ -29,21 +29,31 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
   const title = project.title;
   const description = project.summary;
   const url = absoluteUrl(`/projects/${project.slug}`);
+  const previewImage = absoluteUrl("/opengraph-image");
 
   return {
     title,
     description,
-    alternates: url ? { canonical: url } : undefined,
+    alternates: { canonical: url },
     openGraph: {
       title,
       description,
       type: "article",
       url,
+      images: [
+        {
+          url: previewImage,
+          width: 1200,
+          height: 630,
+          alt: `${portfolio.profile.name} portfolio preview`,
+        },
+      ],
     },
     twitter: {
-      card: "summary",
+      card: "summary_large_image",
       title,
       description,
+      images: [previewImage],
     },
   };
 }

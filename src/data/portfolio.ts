@@ -1,7 +1,6 @@
 import type { PortfolioData } from "@/types/portfolio";
 
 export const placeholders = {
-  portfolioDomain: "TODO_REPLACE_PORTFOLIO_DOMAIN_AFTER_DEPLOY",
   multiAndroidReleaseLink: "TODO_REPLACE_MULTI_ANDROID_APK_OR_PLAY_STORE_LINK",
   geekTextLiveDemo: "TODO_REPLACE_GEEK_TEXT_LIVE_DEMO_URL",
 } as const;
@@ -328,6 +327,7 @@ export const portfolio: PortfolioData = {
           label: "API router",
           alt: "Geek Text FastAPI router code screenshot showing ratings and comments endpoints.",
           aspect: "desktop",
+          presentation: "code",
           src: "/images/projects/geek-text-api-router.png",
         },
       ],

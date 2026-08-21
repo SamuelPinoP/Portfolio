@@ -92,12 +92,11 @@ vercel deploy --prod
 
 The `vercel.json` file sets the framework, install command, and build command for Vercel.
 
-Set `NEXT_PUBLIC_SITE_URL` in Vercel if you want a custom canonical domain before or after adding a custom domain. Vercel system environment variables can also provide the production URL during deployment.
+Set `NEXT_PUBLIC_SITE_URL` in Vercel to the production URL so canonical links, social previews, `robots.txt`, and `sitemap.xml` resolve to the public site.
 
 ## Known Placeholders
 
 Search for `TODO_REPLACE` to find remaining content or asset placeholders:
 
-- `TODO_REPLACE_PORTFOLIO_DOMAIN_AFTER_DEPLOY`
 - `TODO_REPLACE_MULTI_ANDROID_APK_OR_PLAY_STORE_LINK`
 - `TODO_REPLACE_GEEK_TEXT_LIVE_DEMO_URL`

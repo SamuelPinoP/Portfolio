@@ -6,25 +6,43 @@ import { portfolio } from "@/data/portfolio";
 import { getSiteUrl } from "@/lib/site-url";
 import "./globals.css";
 
+const siteUrl = getSiteUrl();
+const previewImage = new URL("/opengraph-image", siteUrl).toString();
+const title = `${portfolio.profile.name} | ${portfolio.profile.title}`;
+
 export const metadata: Metadata = {
-  metadataBase: getSiteUrl(),
+  metadataBase: siteUrl,
   title: {
-    default: `${portfolio.profile.name} | ${portfolio.profile.title}`,
+    default: title,
     template: `%s | ${portfolio.profile.name}`,
   },
   description: portfolio.profile.summary,
+  alternates: {
+    canonical: "/",
+  },
   authors: [{ name: portfolio.profile.name }],
   creator: portfolio.profile.name,
   applicationName: `${portfolio.profile.name} Portfolio`,
   openGraph: {
-    title: `${portfolio.profile.name} | ${portfolio.profile.title}`,
+    title,
     description: portfolio.profile.summary,
     type: "website",
+    url: "/",
+    siteName: `${portfolio.profile.name} Portfolio`,
+    images: [
+      {
+        url: previewImage,
+        width: 1200,
+        height: 630,
+        alt: `${portfolio.profile.name} portfolio preview`,
+      },
+    ],
   },
   twitter: {
-    card: "summary",
-    title: `${portfolio.profile.name} | ${portfolio.profile.title}`,
+    card: "summary_large_image",
+    title,
     description: portfolio.profile.summary,
+    images: [previewImage],
   },
   robots: {
     index: true,

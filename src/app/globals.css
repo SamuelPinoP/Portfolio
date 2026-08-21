@@ -437,6 +437,10 @@ button:focus-visible {
   grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
 }
 
+.media-grid-single {
+  grid-template-columns: 1fr;
+}
+
 .media-frame {
   align-items: end;
   aspect-ratio: 16 / 10;
@@ -477,8 +481,26 @@ button:focus-visible {
   width: 100%;
 }
 
+.media-grid-single .media-frame {
+  min-height: 300px;
+}
+
+.detail-section .media-grid-single .media-frame {
+  min-height: 420px;
+}
+
+.media-frame-code {
+  background: #111411;
+  border-color: rgba(25, 77, 69, 0.34);
+}
+
 .media-image {
   object-fit: contain;
+}
+
+.media-frame-code .media-image {
+  object-fit: cover;
+  object-position: left top;
 }
 
 .media-frame-mobile .media-image {

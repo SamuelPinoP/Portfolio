@@ -24,6 +24,7 @@ export type ProjectScreenshot = {
   label: string;
   alt: string;
   aspect: "desktop" | "mobile";
+  presentation?: "standard" | "code";
   src?: string;
   placeholder?: string;
 };
