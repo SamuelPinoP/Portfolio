@@ -417,7 +417,7 @@ export const portfolio: PortfolioData = {
       title: "AI Content Reviewer / Data Annotator",
       organization: "Outlier (Scale AI)",
       location: "Remote",
-      timeframe: "Jan 2024 - Nov 2025",
+      timeframe: "Dec 2023 - Mar 2024",
       bullets: [
         "Evaluated AI-generated responses for factual correctness, reasoning, safety, clarity, formatting, and instruction adherence.",
         "Applied evolving guidelines, investigated edge cases, and documented structured rationales for quality-review decisions.",
@@ -437,7 +437,7 @@ export const portfolio: PortfolioData = {
       title: "Customer Service Associate",
       organization: "Publix Supermarkets",
       location: "Florida City, Florida",
-      timeframe: "Jan 2023 - Jan 2026",
+      timeframe: "Jan 2023 - Aug 2026",
       bullets: [
         "Resolved customer and operational issues in a high-volume environment while coordinating with teammates.",
         "Earned above-expectations performance evaluations for initiative, cooperation, and customer service.",
