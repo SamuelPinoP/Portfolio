@@ -35,7 +35,7 @@ export const portfolio: PortfolioData = {
   ],
   social: [
     { label: "GitHub", href: "https://github.com/SamuelPinoP" },
-    { label: "LinkedIn", href: "https://www.linkedin.com/in/samuel-pino-a903052a6/" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/samuelpinopena/" },
   ],
   projects: [
     {
