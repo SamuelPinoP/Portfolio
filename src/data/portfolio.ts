@@ -43,10 +43,10 @@ export const portfolio: PortfolioData = {
       slug: "ai-multi",
       eyebrow: "Featured full-stack platform",
       timeframe: "Apr 2026 - Present",
-      status: "Live production application",
+      status: "Live production application with a no-sign-up demo",
       role: "Full-stack developer",
       summary:
-        "A production productivity and collaboration platform with tasks, notes, events, planning workflows, authentication, authorization, and file-backed project communication.",
+        "A production productivity and collaboration platform with tasks, notes, events, planning workflows, project chat, and an AI assistant that answers questions about your own work.",
       description:
         "AI-Multi is a full-stack Next.js application backed by PostgreSQL and Prisma. It demonstrates production application work across UI, API routes, authorization, relational modeling, deployment, and debugging.",
       technologies: [
@@ -58,6 +58,8 @@ export const portfolio: PortfolioData = {
         "Neon PostgreSQL",
         "REST API routes",
         "Vercel",
+        "Gemini API",
+        "Playwright",
         "GitHub CI/CD",
       ],
       features: [
@@ -65,14 +67,19 @@ export const portfolio: PortfolioData = {
         "Task priority, status, and due dates",
         "Calendar and recurring workflows",
         "Authentication and database-backed sessions",
-        "Owner, Editor, and Viewer authorization",
+        "Owner, Admin, and Editor roles enforced on the server",
         "Recoverable deletion",
         "Attachment-enabled project chat",
         "Persistent database-backed data",
+        "AI assistant with tool calling, source links, and saved chats",
+        "Guest workspace with sample data, no sign-up needed",
       ],
       engineeringHighlights: [
-        "Architected 27 Next.js API route modules and 44 HTTP handlers.",
-        "Modeled a 17-entity Prisma/PostgreSQL persistence layer for tasks, notes, events, projects, planning, and collaboration.",
+        "Architected 70+ Next.js API route modules and 110+ HTTP handlers.",
+        "Modeled a 37-model Prisma/PostgreSQL schema over 59 migrations for tasks, notes, events, projects, chat, and collaboration.",
+        "Built an AI assistant on Gemini tool calling: six permission-checked, read-only tools, streamed answers with source links, saved chats, per-user cost caps, and prompt-injection defenses.",
+        "Opened the app to visitors with a guest workspace seeded with sample data, with guest limits enforced on the server.",
+        "Protected main with a CI pipeline that runs lint, type checks, 850+ automated tests (Playwright on production builds, unit tests in four time zones), and visual regression.",
         "Deployed through a GitHub-integrated Vercel workflow and traced defects across UI, API, authorization, configuration, and database layers.",
       ],
       challenges: [
@@ -88,7 +95,7 @@ export const portfolio: PortfolioData = {
       ],
       links: [
         {
-          label: "Live application",
+          label: "Live demo (no sign-up)",
           href: "https://ai-multi-task-management-vercel.vercel.app/",
           kind: "demo",
         },
@@ -129,14 +136,15 @@ export const portfolio: PortfolioData = {
           title: "Architecture",
           body: [
             "The application uses Next.js App Router for the interface and API routes, Prisma for database access, and Neon PostgreSQL for production persistence.",
-            "The data layer includes 17 PostgreSQL models supporting tasks, notes, events, projects, planning, collaboration, and file-backed communication.",
+            "The data layer includes 37 PostgreSQL models supporting tasks, notes, events, projects, planning, collaboration, file-backed communication, and the AI assistant's chats and usage log.",
           ],
         },
         {
           title: "Engineering Decisions",
           body: [
-            "Role-based authorization separates Owner, Editor, and Viewer permissions so collaborative data can be protected at the workflow level.",
+            "Role-based authorization separates Owner, Admin, and Editor permissions on the server so collaborative data is protected at the workflow level.",
             "GitHub-integrated Vercel deployment keeps production releases connected to normal source-control practices.",
+            "The AI assistant calls the same permission filters as the app's API routes, validates every tool call with a Zod schema, and treats stored text as data, so the model only ever sees the signed-in person's own work.",
           ],
         },
         {
